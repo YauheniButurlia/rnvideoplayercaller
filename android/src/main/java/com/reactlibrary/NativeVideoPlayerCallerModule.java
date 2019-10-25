@@ -5,12 +5,13 @@ import android.content.Intent;
 import android.net.Uri;
 import android.provider.MediaStore;
 
+import com.facebook.react.bridge.ActivityEventListener;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.Callback;
 
-public class NativeVideoPlayerCallerModule extends ReactContextBaseJavaModule {
+public class NativeVideoPlayerCallerModule extends ReactContextBaseJavaModule implements ActivityEventListener {
 
     public final int VIDEO_CODE = 1;
     private final ReactApplicationContext reactContext;
@@ -40,5 +41,10 @@ public class NativeVideoPlayerCallerModule extends ReactContextBaseJavaModule {
         if (requestCode == VIDEO_CODE) {
             getCurrentActivity().finish();
         }
+    }
+
+    @Override
+    public void onNewIntent(Intent intent) {
+
     }
 }
