@@ -2,7 +2,7 @@
 
 ## Getting started
 
-`$ npm install https://github.com/YauheniButurlia/rnvideoplayercaller`
+`$ npm i react-native-native-video-player-caller`
 
 ### Mostly automatic installation
 
